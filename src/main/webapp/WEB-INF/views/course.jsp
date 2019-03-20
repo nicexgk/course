@@ -18,7 +18,6 @@ $(document).ready(function(){
 
 		if(data==null||data.list.length<=0){
 			$("#mycomment").html("暂无评论");
-			
 		}else{
 			var str="";
 			var j
