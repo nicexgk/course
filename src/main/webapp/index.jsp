@@ -912,7 +912,6 @@
                 </div>
             </div>
 
-
             <!---------------------IT培训 第一个课程DIV start ------------------------>
             <div class="bBigDiv" id="bBigDivYuYan">
                 <!--居中div-->

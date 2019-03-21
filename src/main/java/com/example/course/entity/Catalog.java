@@ -37,7 +37,7 @@ public class Catalog implements Serializable {
 	// 目录的循序
 	private Integer catalog_order;
 	// 目录的类型 0 代表目录，1代表视频，2代表课件
-	private Integer catalot_type;
+	private Integer catalog_type;
 	// 目录的名字
 	private String catalog_name;
 	// 目录的内容一般为url路径
@@ -48,13 +48,13 @@ public class Catalog implements Serializable {
 	}
 
 	public Catalog(Integer catalog_id, Integer parent_id, Integer catalog_course, Integer catalog_order,
-			Integer catalot_type, String catalog_name, String catalog_content) {
+			Integer catalog_type, String catalog_name, String catalog_content) {
 		super();
 		this.catalog_id = catalog_id;
 		this.parent_id = parent_id;
 		this.catalog_course = catalog_course;
 		this.catalog_order = catalog_order;
-		this.catalot_type = catalot_type;
+		this.catalog_type = catalog_type;
 		this.catalog_name = catalog_name;
 		this.catalog_content = catalog_content;
 	}
@@ -92,11 +92,11 @@ public class Catalog implements Serializable {
 	}
 
 	public Integer getCatalot_type() {
-		return catalot_type;
+		return catalog_type;
 	}
 
-	public void setCatalot_type(Integer catalot_type) {
-		this.catalot_type = catalot_type;
+	public void setCatalog_type(Integer catalog_type) {
+		this.catalog_type = catalog_type;
 	}
 
 	public String getCatalog_name() {
@@ -122,7 +122,7 @@ public class Catalog implements Serializable {
 	@Override
 	public String toString() {
 		return "Catalog [catalog_id=" + catalog_id + ", parent_id=" + parent_id + ", catalog_course=" + catalog_course
-				+ ", catalog_order=" + catalog_order + ", catalot_type=" + catalot_type + ", catalog_name="
+				+ ", catalog_order=" + catalog_order + ", catalog_type=" + catalog_type + ", catalog_name="
 				+ catalog_name + ", catalog_content=" + catalog_content + "]";
 	}
 

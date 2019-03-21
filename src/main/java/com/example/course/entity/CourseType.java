@@ -1,6 +1,7 @@
 package com.example.course.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /*
  * 
@@ -20,59 +21,78 @@ CREATE TABLE  course_type  (
  */
 
 /**
- * 		 课程类型表
- * 
- * @author A1621
+ * 课程类型表
  *
+ * @author A1621
  */
 public class CourseType implements Serializable {
-	private static final long serialVersionUID = 1L;
-	private Integer type_id;
-	private Integer parent_id;
-	private String type_name;
+    private static final long serialVersionUID = 1L;
+    private Integer type_id;
+    private Integer parent_id;
+    private String type_name;
+    private ArrayList<CourseType> subclassList;
 
-	public CourseType() {
-		super();
-	}
+    public CourseType() {
+        super();
+    }
 
-	public CourseType(Integer type_id, Integer parent_id, String type_name) {
-		super();
-		this.type_id = type_id;
-		this.parent_id = parent_id;
-		this.type_name = type_name;
-	}
+    public CourseType(Integer type_id, Integer parent_id, String type_name) {
+        super();
+        this.type_id = type_id;
+        this.parent_id = parent_id;
+        this.type_name = type_name;
+    }
 
-	public Integer getType_id() {
-		return type_id;
-	}
+    public CourseType(Integer type_id, Integer parent_id, String type_name, ArrayList<CourseType> subclassList) {
+        this.type_id = type_id;
+        this.parent_id = parent_id;
+        this.type_name = type_name;
+        this.subclassList = subclassList;
+    }
 
-	public void setType_id(Integer type_id) {
-		this.type_id = type_id;
-	}
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-	public Integer getParent_id() {
-		return parent_id;
-	}
+    public Integer getType_id() {
+        return type_id;
+    }
 
-	public void setParent_id(Integer parent_id) {
-		this.parent_id = parent_id;
-	}
+    public void setType_id(Integer type_id) {
+        this.type_id = type_id;
+    }
 
-	public String getType_name() {
-		return type_name;
-	}
+    public Integer getParent_id() {
+        return parent_id;
+    }
 
-	public void setType_name(String type_name) {
-		this.type_name = type_name;
-	}
+    public void setParent_id(Integer parent_id) {
+        this.parent_id = parent_id;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+    public String getType_name() {
+        return type_name;
+    }
 
-	@Override
-	public String toString() {
-		return "CourseType [type_id=" + type_id + ", parent_id=" + parent_id + ", type_name=" + type_name + "]";
-	}
+    public void setType_name(String type_name) {
+        this.type_name = type_name;
+    }
 
+    public ArrayList<CourseType> getSubclassList() {
+        return subclassList;
+    }
+
+    public void setSubclassList(ArrayList<CourseType> subclassList) {
+        this.subclassList = subclassList;
+    }
+
+    @Override
+    public String toString() {
+        return "CourseType{" +
+                "type_id=" + type_id +
+                ", parent_id=" + parent_id +
+                ", type_name='" + type_name + '\'' +
+                ", subclassList=" + subclassList +
+                '}';
+    }
 }
