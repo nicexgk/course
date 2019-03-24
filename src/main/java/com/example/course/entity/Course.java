@@ -44,7 +44,7 @@ public class Course implements Serializable {
 	// 课程类型
 	private Integer course_type;
 	// 课程编号
-	private String course_person_nember;
+	private String course_person_number;
 	// 课程名字
 	private String course_name;
 	// 课程描述
@@ -61,14 +61,14 @@ public class Course implements Serializable {
 	}
 
 	public Course(Integer course_id, User course_teacher, Integer course_price, Integer course_type,
-			String course_person_nember, String course_name, String description, String pic_url,
+			String course_person_number, String course_name, String description, String pic_url,
 			String course_content_list, String course_date) {
 		super();
 		this.course_id = course_id;
 		this.course_teacher = course_teacher;
 		this.course_price = course_price;
 		this.course_type = course_type;
-		this.course_person_nember = course_person_nember;
+		this.course_person_number = course_person_number;
 		this.course_name = course_name;
 		this.description = description;
 		this.pic_url = pic_url;
@@ -108,12 +108,12 @@ public class Course implements Serializable {
 		this.course_type = course_type;
 	}
 
-	public String getCourse_person_nember() {
-		return course_person_nember;
+	public String getCourse_person_number() {
+		return course_person_number;
 	}
 
-	public void setCourse_person_nember(String course_person_nember) {
-		this.course_person_nember = course_person_nember;
+	public void setCourse_person_number(String course_person_number) {
+		this.course_person_number = course_person_number;
 	}
 
 	public String getCourse_name() {
@@ -163,7 +163,7 @@ public class Course implements Serializable {
 	@Override
 	public String toString() {
 		return "Course [course_id=" + course_id + ", course_teacher=" + course_teacher + ", course_price="
-				+ course_price + ", course_type=" + course_type + ", course_person_nember=" + course_person_nember
+				+ course_price + ", course_type=" + course_type + ", course_person_number=" + course_person_number
 				+ ", course_name=" + course_name + ", description=" + description + ", pic_url=" + pic_url
 				+ ", course_content_list=" + course_content_list + ", course_date=" + course_date + "]";
 	}

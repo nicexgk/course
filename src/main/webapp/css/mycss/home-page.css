@@ -1,3 +1,6 @@
+
+
+
 body{
     margin:0px;
     padding:0px;
@@ -6,7 +9,6 @@ body{
     min-width:1200px;
 }
 a{
-
     text-decoration:none;
 }
 a img{
@@ -17,6 +19,10 @@ li{
 }
 ol, ul{
     list-style:outside none none;
+}
+
+.header-nav{
+    display: none;
 }
 /*头部*/
 .mod-header_wrap{
@@ -220,11 +226,11 @@ ol, ul{
     padding:0px 30px;
     position:absolute;
     top:0px;
-    width:382px;
+    width:700px;
 }
 .mod-nav_side-list{
     padding-left:0px;
-    width:382px;
+    width:800px;
 }
 .mod-nav_side-li{
     border-bottom:1px solid #e5e5e5;
@@ -236,21 +242,23 @@ ol, ul{
     font-weight:bold;
     text-align:left;
     vertical-align:top;
-    width:80px;
+    width:100px;
 }
 .mod-nav_wrap-nav-third{
     display:inline-block;
     vertical-align:top;
-    width:297px;
+    width:600px;
 }
 .mod-nav_link-nav-third{
     color:#333;
     display:inline-block;
     margin-bottom:3px;
-    margin-right:7px;
+    margin-right:10px;
     text-align:left;
     vertical-align:top;
-    width:91px;
+    /*width:91px;*/
+    height: 25px;
+    min-width: 90px;
 }
 /*隐藏块 样式 end*/
 /*wrap-nav 左边导航条 end*/

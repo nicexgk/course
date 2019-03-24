@@ -13,15 +13,15 @@
     <script type="text/javascript" src="js/myjs/blanner.js"></script>
 </head>
 <body>
-
-
-
+<c:if test="${requestScope.courseTypeCatalog == null}">
+    <jsp:forward page="index.html"></jsp:forward>
+    <h1>nice nice nice</h1>
+</c:if>
 <!------------------------------ header start --------------------------------------->
 <div>
     <jsp:include page="WEB-INF/views/common/header.jsp" flush="true"></jsp:include>
 </div>
 <!------------------------------ header end ----------------------------------------->
-
 
 
 <!------------------------------ 主体DIV start -------------------------------------->
@@ -49,484 +49,45 @@
                                         <span>全部课程</span>
                                     </a>
                                 </li>
-                                <!---------------第1个li end   ----------------->
-                                <!---------------第2个li start ----------------->
-                                <li class="mod-nav_li" style="">
-                                    <!--主标题div-->
-                                    <div class="mod-nav_wrap-nav-first">
-                                        <i class="icon-nav-arrow-right"></i>
-                                        <a class="mod-nav_link-nav-first" target="_blank" href="#">职业技能</a>
-                                    </div>
-                                    <!--===========主标题div end-->
-                                    <!---热门选项 div[hot=3]-->
-                                    <div class="mod-nav-wrap-nav-hot">
-                                        <a class="mod-nav_link-nav-hot" target="_blank"
-                                           href="#">职场技能</a> <a
-                                            class="mod-nav_link-nav-hot" target="_blank"
-                                            href="#">SNS营销</a> <a
-                                            class="mod-nav_link-nav-hot" target="_blank"
-                                            href="#">公务员</a>
-                                    </div>
-                                    <!---==========热门选项 div end -->
-                                    <!---------- 隐藏块div -------->
-                                    <div class="mod-nav_wrap-nav-side">
-                                        <ul class="mod-nav_side-list">
-                                            <!--有几个标题写几个li [li =4]-->
-                                            <li class="mod-nav_side-li">
-                                                <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=5]-->
-                                                    <a class="mod-nav_link-nav-third">就业指导</a><a
-                                                        class="mod-nav_link-nav-third">职业规划</a><a
-                                                        class="mod-nav_link-nav-third">职场技能</a><a
-                                                        class="mod-nav_link-nav-third">企业培训</a><a
-                                                        class="mod-nav_link-nav-third">创业指导</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!---------- 隐藏块div -------->
-                                </li>
-                                <!---------------第2个li end   ----------------->
-                                <!---------------第3个li start ----------------->
-                                <li class="mod-nav_li">
-                                    <!--主标题div-->
-                                    <div class="mod-nav_wrap-nav-first">
-                                        <i class="icon-nav-arrow-right"></i>
-                                        <a class="mod-nav_link-nav-first" target="_blank" href="#">IT培训</a>
-                                    </div> <!--===========主标题div end--> <!---热门选项 div[hot=3]-->
-                                    <div class="mod-nav-wrap-nav-hot">
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">网站制作</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">手机开发</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">游戏制作</a>
-                                    </div> <!---==========热门选项 div end --> <!--隐藏块div-->
-                                    <div class="mod-nav_wrap-nav-side">
-                                        <ul class="mod-nav_side-list">
-                                            <!--有几个标题写几个li [li =4]-->
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">编程开发</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=5]-->
-                                                    <a class="mod-nav_link-nav-third">网站制作</a>
-                                                    <a class="mod-nav_link-nav-third">游戏开发</a>
-                                                    <a class="mod-nav_link-nav-third">手机开发</a>
-                                                    <a class="mod-nav_link-nav-third">数据库</a>
-                                                    <a class="mod-nav_link-nav-third">编程语言</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">工具软件</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=8]-->
-                                                    <a class="mod-nav_link-nav-third">网页制作</a>
-                                                    <a class="mod-nav_link-nav-third">网页/平面设计</a>
-                                                    <a class="mod-nav_link-nav-third">室内/建筑设计</a>
-                                                    <a class="mod-nav_link-nav-third">机械/模具设计</a>
-                                                    <a class="mod-nav_link-nav-third">游戏制作</a>
-                                                    <a class="mod-nav_link-nav-third">视频处理</a>
-                                                    <a class="mod-nav_link-nav-third">办公</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">游戏设计</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">原画设计</a>
-                                                    <a class="mod-nav_link-nav-third">产品设计</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">动漫制作</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=1]-->
-                                                    <a class="mod-nav_link-nav-third">动漫制作</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">其它</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=1]-->
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <!--============================有几个标题写几个li -->
-                                        </ul>
-                                    </div> <!--===========隐藏块div-->
-                                </li>
-                                <!---------------第3个li end   ----------------->
-                                <!---------------第4个li start ----------------->
-                                <li class="mod-nav_li">
-                                    <!--主标题div-->
-                                    <div class="mod-nav_wrap-nav-first">
-                                        <i class="icon-nav-arrow-right"></i>
-                                        <a class="mod-nav_link-nav-first" target="_blank" href="#">语言学习</a>
-                                    </div> <!--===========主标题div end--> <!---热门选项 div[hot=3]-->
-                                    <div class="mod-nav-wrap-nav-hot">
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">英语口语</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">日语</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">韩语</a>
-                                    </div> <!---==========热门选项 div end --> <!--隐藏块div-->
-                                    <div class="mod-nav_wrap-nav-side">
-                                        <ul class="mod-nav_side-list">
-                                            <!--有几个标题写几个li [li =8]-->
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题--> <a class="mod-nav_link-nav-second" target="_blank" href="">英语口语</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=5]-->
-                                                    <a class="mod-nav_link-nav-third">初级入门</a>
-                                                    <a class="mod-nav_link-nav-third">英语语法</a>
-                                                    <a class="mod-nav_link-nav-third">音标词汇</a>
-                                                    <a class="mod-nav_link-nav-third">口语进阶</a>
-                                                    <a class="mod-nav_link-nav-third">旅行英语</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">英语考试</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=4]-->
-                                                    <a class="mod-nav_link-nav-third">四/六级</a>
-                                                    <a class="mod-nav_link-nav-third">考研英语</a>
-                                                    <a class="mod-nav_link-nav-third">自考/职称英语</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">留学英语</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=6]-->
-                                                    <a class="mod-nav_link-nav-third">雅思</a>
-                                                    <a class="mod-nav_link-nav-third">托福</a>
-                                                    <a class="mod-nav_link-nav-third">SAT</a>
-                                                    <a class="mod-nav_link-nav-third">GRE/GMAT</a>
-                                                    <a class="mod-nav_link-nav-third">留学指导</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">商务英语</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=3]-->
-                                                    <a class="mod-nav_link-nav-third">职场英语</a>
-                                                    <a class="mod-nav_link-nav-third">行业英语</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">汉语</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">普通话</a>
-                                                    <a class="mod-nav_link-nav-third">粤语</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">韩语</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">初级入门</a>
-                                                    <a class="mod-nav_link-nav-third">韩语进阶</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">日语</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">初级入门</a>
-                                                    <a class="mod-nav_link-nav-third">日语进阶</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">其它</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <!--============================有几个标题写几个li -->
-                                        </ul>
-                                    </div> <!--===========隐藏块div-->
-                                </li>
-                                <!---------------第4个li end   ----------------->
-                                <!---------------第5个li start ----------------->
-                                <li class="mod-nav_li">
-                                    <!--主标题div-->
-                                    <div class="mod-nav_wrap-nav-first">
-                                        <i class="icon-nav-arrow-right"></i>
-                                        <a class="mod-nav_link-nav-first" target="_blank" href="#">中小学/大学</a>
-                                    </div> <!--===========主标题div end--> <!---热门选项 div[hot=2]-->
-                                    <div class="mod-nav-wrap-nav-hot">
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">考研/自考</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">中考备战</a>
-                                    </div> <!---==========热门选项 div end --> <!--隐藏块div-->
-                                    <div class="mod-nav_wrap-nav-side">
-                                        <ul class="mod-nav_side-list">
-                                            <!--有几个标题写几个li [li =8]-->
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">小学</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=5]-->
-                                                    <a class="mod-nav_link-nav-third">语文</a>
-                                                    <a class="mod-nav_link-nav-third">数学</a>
-                                                    <a class="mod-nav_link-nav-third">英语</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">初中</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=4]-->
-                                                    <a class="mod-nav_link-nav-third">语文</a>
-                                                    <a class="mod-nav_link-nav-third">数学</a>
-                                                    <a class="mod-nav_link-nav-third">英语</a>
-                                                    <a class="mod-nav_link-nav-third">理综</a>
-                                                    <a class="mod-nav_link-nav-third">文综</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">高中</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=4]-->
-                                                    <a class="mod-nav_link-nav-third">语文</a>
-                                                    <a class="mod-nav_link-nav-third">数学</a>
-                                                    <a class="mod-nav_link-nav-third">英语</a>
-                                                    <a class="mod-nav_link-nav-third">理综</a>
-                                                    <a class="mod-nav_link-nav-third">文综</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题--> <a class="mod-nav_link-nav-second" target="_blank" href="">小升初备战</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=6]-->
-                                                    <a class="mod-nav_link-nav-third">小升初备战</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">中考备战</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=6]-->
-                                                    <a class="mod-nav_link-nav-third">中考备战</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">高考备战</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=6]-->
-                                                    <a class="mod-nav_link-nav-third">高考备战</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">考研/自考</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=6]-->
-                                                    <a class="mod-nav_link-nav-third">考研/自考</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div> <!--=============小目录块-->
-                                            </li>
-                                            <!--============================有几个标题写几个li -->
-                                        </ul>
-                                    </div> <!--===========隐藏块div-->
-                                </li>
-                                <!---------------第5个li end   ----------------->
-                                <!---------------第6个li start ----------------->
-                                <li class="mod-nav_li">
-                                    <!--主标题div-->
-                                    <div class="mod-nav_wrap-nav-first">
-                                        <i class="icon-nav-arrow-right"></i>
-                                        <a class="mod-nav_link-nav-first" target="_blank" href="#">兴趣爱好</a>
-                                    </div> <!--===========主标题div end--> <!---热门选项 div[hot=3]-->
-                                    <div class="mod-nav-wrap-nav-hot">
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">投资理财</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">美妆</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">摄影</a>
-                                    </div> <!---==========热门选项 div end --> <!--隐藏块div-->
-                                    <div class="mod-nav_wrap-nav-side">
-                                        <ul class="mod-nav_side-list">
-                                            <!--有几个标题写几个li [li =4]-->
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">投资理财</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=5]-->
-                                                    <a class="mod-nav_link-nav-third">投资理财</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">生活百科</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=8]-->
-                                                    <a class="mod-nav_link-nav-third">婚恋</a>
-                                                    <a class="mod-nav_link-nav-third">美妆</a>
-                                                    <a class="mod-nav_link-nav-third">家装</a>
-                                                    <a class="mod-nav_link-nav-third">风水</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">文化艺术</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">唱歌</a>
-                                                    <a class="mod-nav_link-nav-third">舞蹈</a>
-                                                    <a class="mod-nav_link-nav-third">书画</a>
-                                                    <a class="mod-nav_link-nav-third">乐器</a>
-                                                    <a class="mod-nav_link-nav-third">摄影</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">时尚健康</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">星座</a>
-                                                    <a class="mod-nav_link-nav-third">瑜伽</a>
-                                                    <a class="mod-nav_link-nav-third">养生</a>
-                                                    <a class="mod-nav_link-nav-third">其它</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <!--============================有几个标题写几个li -->
-                                        </ul>
-                                    </div> <!--===========隐藏块div-->
-                                </li>
-                                <!---------------第6个li end   ----------------->
-                                <!---------------第7个li start ----------------->
-                                <li class="mod-nav_li">
-                                    <!--主标题div-->
-                                    <div class="mod-nav_wrap-nav-first">
-                                        <i class="icon-nav-arrow-right"></i>
-                                        <a class="mod-nav_link-nav-first" target="_blank" href="#">亲子课堂</a>
-                                    </div> <!--===========主标题div end--> <!---热门选项 div[hot=3]-->
-                                    <div class="mod-nav-wrap-nav-hot">
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">幼儿教育</a>
-                                        <a class="mod-nav_link-nav-hot" target="_blank" href="#">家长训练营</a>
-                                    </div>
-                                    <!---==========热门选项 div end --> <!--隐藏块div-->
-                                    <div class="mod-nav_wrap-nav-side">
-                                        <ul class="mod-nav_side-list">
-                                            <!--有几个标题写几个li [li =4]-->
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">幼儿教育</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=5]-->
-                                                    <a class="mod-nav_link-nav-third">幼儿教育</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">学前早教</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=8]-->
-                                                    <a class="mod-nav_link-nav-third">学前早教</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <li class="mod-nav_side-li">
-                                                <!--次标题-->
-                                                <a class="mod-nav_link-nav-second" target="_blank" href="">家长训练营</a>
-                                                <!--============次标题--> <!--小目录块-->
-                                                <div class="mod-nav_wrap-nav-third">
-                                                    <!--目录项目 a标签块   [third=2]-->
-                                                    <a class="mod-nav_link-nav-third">家长训练营</a>
-                                                    <!--==============目录项目 a标签块-->
-                                                </div>
-                                                <!--=============小目录块-->
-                                            </li>
-                                            <!--============================有几个标题写几个li -->
-                                        </ul>
-                                    </div> <!--===========隐藏块div-->
-                                </li>
-                                <!---------------第7个li end   ----------------->
+                                <!---------------第1个li  end  ----------------->
+                                <!---------------循环输出第n个li start  ---------------->
+                                <c:forEach items="${requestScope.courseTypeCatalog}" var="parentType">
+                                    <li class="mod-nav_li">
+                                        <!--主标题div-->
+                                        <div class="mod-nav_wrap-nav-first">
+                                            <i class="icon-nav-arrow-right"></i>
+                                            <a class="mod-nav_link-nav-first" target="_blank" href="#">${parentType.type_name}</a>
+                                        </div>
+                                        <!--===========主标题div end--> <!---热门选项 div[hot=3]-->
+                                        <div class="mod-nav-wrap-nav-hot">
+                                            <c:forEach items="${parentType.subclassList}" var="secondType" begin="0" end="2">
+                                                <a class="mod-nav_link-nav-hot" target="_blank" href="#">${secondType.type_name}</a>
+                                            </c:forEach>
+                                        </div>
+                                        <!---==========热门选项 div end --> <!--隐藏块div-->
+                                        <div class="mod-nav_wrap-nav-side">
+                                            <ul class="mod-nav_side-list">
+                                                <c:forEach items="${parentType.subclassList}" var="secondType">
+                                                    <!--有几个标题写几个li [li =4]-->
+                                                    <li class="mod-nav_side-li">
+                                                        <!--次标题-->
+                                                        <a class="mod-nav_link-nav-second" target="_blank" href="">${secondType.type_name}</a>
+                                                        <!--============次标题--> <!--小目录块-->
+                                                        <div class="mod-nav_wrap-nav-third">
+                                                            <!--目录项目 a标签块   [third=5]-->
+                                                            <c:forEach items="${secondType.subclassList}" var="childType">
+                                                                <a class="mod-nav_link-nav-third">${childType.type_name}</a>
+                                                            </c:forEach>
+                                                            <!--==============目录项目 a标签块-->
+                                                        </div>
+                                                        <!--=============小目录块-->
+                                                    </li>
+                                                </c:forEach>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </c:forEach>
+                                <!---------------循环输出第n个li end   ----------------->
                             </ul>
                         </div>
                         <!--导航组件 end-->

@@ -105,6 +105,9 @@
 							data: keys,
 							success: function(msg){
 								$(jC).find('ul').remove();
+
+								//
+								//
 								$(jC).append(msg);
 								$("#jSuggestContainer ul li").bind("mouseover",	function(){
 										$(jH).removeClass(jsH);

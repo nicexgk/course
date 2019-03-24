@@ -1,4 +1,49 @@
-﻿.header{
+﻿
+.container{
+    min-height: 200px;
+}
+.course-label{
+	display: inline-block;
+	line-height: 38px;
+	height: 38px;
+	border-color: #009688;
+	color: #333;
+	margin-left: 35px;
+	margin-right: 10px;
+}
+.course-label2{
+    display: inline-block;
+    line-height: 38px;
+    height: 38px;
+    border-color: #009688;
+    color: #333;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.course-price{
+    display: inline-block;
+    line-height: 38px;
+    height: 38px;
+    border-color: #009688;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-left: 30px;
+    width: 110px;
+    border: 1px solid #C9C9C9;
+}
+
+
+#contain_right{
+    width: 1200px !important;
+}
+
+.layui-upload-img{
+    width: 250px;
+    height: 250px;
+}
+
+.header{
 	width: 100%;
 	overflow: hidden;
 	border-bottom:1px solid #e0e0e0; 

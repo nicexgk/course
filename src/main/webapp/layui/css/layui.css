@@ -2109,7 +2109,7 @@ hr {
 	float: left;
 	display: block;
 	padding: 9px 15px;
-	width: 80px;
+	width: 110px;
 	font-weight: 400;
 	line-height: 20px;
 	text-align: right
@@ -3850,7 +3850,9 @@ body .layui-table-tips .layui-layer-content {
 	height: 40px;
 	line-height: 40px;
 	color: #fff;
-	color: rgba(255, 255, 255, .7)
+	color: rgba(255, 255, 255, .7);
+	display: block;
+	padding-left: 35px;
 }
 
 .layui-nav-tree .layui-nav-child,

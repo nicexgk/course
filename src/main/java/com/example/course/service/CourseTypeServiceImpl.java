@@ -26,18 +26,18 @@ public class CourseTypeServiceImpl implements CourseTypeService {
                 parentType.setSubclassList(new ArrayList<CourseType>());
             }
 
-            for (CourseType secondType: secondTypeList) {
-                if(secondType.getSubclassList() == null){
+            for (CourseType secondType : secondTypeList) {
+                if (secondType.getSubclassList() == null) {
                     secondType.setSubclassList(new ArrayList<CourseType>());
-                    if(secondType.getParent_id() == parentType.getType_id()){
-                        if (parentType.getSubclassList().indexOf(secondType) == -1){
-                            parentType.getSubclassList().add(secondType);
-                        }
+                }
+                if (secondType.getParent_id() == parentType.getType_id()) {
+                    if (parentType.getSubclassList().indexOf(secondType) == -1) {
+                        parentType.getSubclassList().add(secondType);
                     }
                 }
-                for(CourseType chileType : chileTypeList){
-                    if (chileType.getParent_id() == secondType.getType_id()){
-                        if (secondType.getSubclassList().indexOf(chileType) == -1){
+                for (CourseType chileType : chileTypeList) {
+                    if (chileType.getParent_id() == secondType.getType_id()) {
+                        if (secondType.getSubclassList().indexOf(chileType) == -1) {
                             secondType.getSubclassList().add(chileType);
                         }
                     }

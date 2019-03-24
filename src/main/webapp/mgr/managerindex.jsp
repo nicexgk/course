@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -122,9 +122,8 @@
 	</div>
 
 	<div class="right">
-		<iframe id="rightFrame" name="rightFrame" width="100%" height="100%"
-			style="border: 0px solid #CCC; margin: 0; padding: 0;"
-		></iframe>
+		<iframe id="rightFrame" name="rightFrame" width="100%" height="100%" style="border: 0px solid #CCC; margin: 0; padding: 0;">
+	</iframe>
 	</div>
 
 </body>
