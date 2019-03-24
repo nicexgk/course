@@ -11,13 +11,13 @@
 <head>
     <title>header</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="css/jsuggest.css">
     <link rel="stylesheet" href="css/mycss/home-page-body.css">
     <script src="js/jquery.js"></script>
-    <script src="js/jSuggest.js"></script>
+    <script src="/js/jSuggest.js"></script>
     <script src="js/myjs/login-form.js"></script>
-
+    <script src="js/myjs/courseTypeCatalog.js"></script>
     <script>
         $(document).ready(function () {
             //绑定输入框，产生自动补全效果
@@ -30,7 +30,6 @@
             });
         });
     </script>
-
 </head>
 <body>
 <header class="header-index" id="js_main_nav">
@@ -42,10 +41,63 @@
         <div class="header-index-category js-header-index-category header-index-category__show"
              report-hover="obj1=cates">
             <div class="header-index-category-text">
-                <i class="icon-font i-list-index"></i>
+                <i class="icon-font i-list-index">
+                </i>
                 <a href="." target="_blank" title="首页">首页</a>
                 <a href="." target="_blank" title="首页">课程</a>
             </div>
+            <!--导航组件-->
+            <div class="mod-nav header-nav" id="navigator">
+                <ul class="mod-nav_list">
+                    <!---------------第1个li start ----------------->
+                    <li class="mod-nav_li-first">
+                        <a class="mod-nav_course-all" target="_blank" href="queryAllCourse.action">
+                            <i class="icon-hamburg"></i>
+                            <span>全部课程</span>
+                        </a>
+                    </li>
+                    <!---------------第1个li  end  ----------------->
+                    <!---------------循环输出第n个li start  ---------------->
+                    <c:forEach items="${requestScope.courseTypeCatalog}" var="parentType">
+                        <li class="mod-nav_li">
+                            <!--主标题div-->
+                            <div class="mod-nav_wrap-nav-first">
+                                <i class="icon-nav-arrow-right"></i>
+                                <a class="mod-nav_link-nav-first" target="_blank" href="#">${parentType.type_name}</a>
+                            </div>
+                            <!--===========主标题div end--> <!---热门选项 div[hot=3]-->
+                            <div class="mod-nav-wrap-nav-hot">
+                                <c:forEach items="${parentType.subclassList}" var="secondType" begin="0" end="2">
+                                    <a class="mod-nav_link-nav-hot" target="_blank" href="#">${secondType.type_name}</a>
+                                </c:forEach>
+                            </div>
+                            <!---==========热门选项 div end --> <!--隐藏块div-->
+                            <div class="mod-nav_wrap-nav-side">
+                                <ul class="mod-nav_side-list">
+                                    <c:forEach items="${parentType.subclassList}" var="secondType">
+                                        <!--有几个标题写几个li [li =4]-->
+                                        <li class="mod-nav_side-li">
+                                            <!--次标题-->
+                                            <a class="mod-nav_link-nav-second" target="_blank" href="">${secondType.type_name}</a>
+                                            <!--============次标题--> <!--小目录块-->
+                                            <div class="mod-nav_wrap-nav-third">
+                                                <!--目录项目 a标签块   [third=5]-->
+                                                <c:forEach items="${secondType.subclassList}" var="childType">
+                                                    <a class="mod-nav_link-nav-third">${childType.type_name}</a>
+                                                </c:forEach>
+                                                <!--==============目录项目 a标签块-->
+                                            </div>
+                                            <!--=============小目录块-->
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                        </li>
+                    </c:forEach>
+                    <!---------------循环输出第n个li end   ----------------->
+                </ul>
+            </div>
+            <!--导航组件 end-->
         </div>
         <!--------------- 分类菜单 end  ------------------------------>
 

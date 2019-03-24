@@ -32,7 +32,8 @@
     	时间：2018-11-17
     	描述：1.课程概况页面
     -->
-	<jsp:include page="/WEB-INF/views/coursemanagernav.jspmanagernav.jsp"></jsp:include>
+	<%--<jsp:include page="/WEB-INF/views/coursemanagernav.jsp"></jsp:include>--%>
+
 	<!-- contain_right start -->
 	<div id="contain_right">
 		<table class="layui-table courselist-table">
@@ -50,8 +51,6 @@
 		    	</tr> 
 		  	</thead>
 		  	<tbody id="table-tbody">
-		  		
-		    	
 		  	</tbody>
 		</table>
 		<div id="coursepage">
@@ -139,7 +138,6 @@
 					$.post("deleteCourse.action",{courseId:courseId},function(res){
 	    				layer.msg('删除成功');
 	    				location.reload();
-	    				
     				});
 				});
 			});
